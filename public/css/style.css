@@ -1,0 +1,40 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Trebuchet MS", Arial, sans-serif; background: #fff0f5; color: #5a2a3f; }
+
+.navbar { background: linear-gradient(90deg, #ff8fb8, #ffb3d1); padding: 16px 32px; display: flex; gap: 24px; align-items: center; box-shadow: 0 3px 10px rgba(255,105,160,.3); }
+.navbar a { color: #fff; text-decoration: none; font-weight: bold; }
+.navbar .brand { font-size: 1.4rem; margin-right: auto; }
+
+.container { max-width: 1100px; margin: 32px auto; padding: 0 16px; min-height: 70vh; }
+h1 { color: #e0457b; margin-bottom: 8px; }
+.bar-atas { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+
+.btn { display: inline-block; padding: 8px 16px; background: #ff6fa5; color: #fff; border: none; border-radius: 999px; text-decoration: none; font-weight: bold; font-size: 1rem; cursor: pointer; font-family: inherit; }
+.btn:hover { background: #e0457b; }
+.btn-kecil { padding: 5px 12px; font-size: .85rem; }
+.btn-hapus { background: #c2185b; }
+.btn-abu { background: #b9a3ad; }
+
+.notif { background: #e6f9ee; border: 2px solid #8fd9ac; color: #1d6b3c; padding: 10px 16px; border-radius: 12px; margin-bottom: 16px; }
+.notif-error { background: #ffe3e8; border-color: #ff9fb3; color: #a3173a; }
+
+.tabel-wrap { overflow-x: auto; background: #fff; border-radius: 20px; border: 2px solid #ffd1e3; }
+.tabel { width: 100%; border-collapse: collapse; }
+.tabel th { background: #ffe0ec; color: #c2185b; text-align: left; padding: 12px; }
+.tabel td { padding: 12px; border-top: 1px solid #ffe0ec; }
+.tabel tr:hover td { background: #fff7fa; }
+.aksi { display: flex; gap: 6px; align-items: center; }
+
+.lencana { padding: 3px 12px; border-radius: 999px; font-size: .85rem; font-weight: bold; }
+.lencana-silver { background: #e8e8ee; color: #555; }
+.lencana-gold { background: #fff0c2; color: #8a6200; }
+.lencana-platinum { background: #e5dcff; color: #5a38b8; }
+
+.form { background: #fff; border: 2px solid #ffd1e3; border-radius: 24px; padding: 24px; max-width: 600px; display: flex; flex-direction: column; gap: 14px; }
+.form label { display: flex; flex-direction: column; gap: 4px; font-weight: bold; color: #c2185b; }
+.form input, .form select, .form textarea { padding: 10px; border: 2px solid #ffb3d1; border-radius: 12px; font-family: inherit; font-size: 1rem; color: #5a2a3f; }
+.form input:focus, .form select:focus, .form textarea:focus { outline: none; border-color: #e0457b; }
+.form-aksi { display: flex; gap: 10px; }
+
+.not-found { text-align: center; margin-top: 60px; }
+.footer { text-align: center; padding: 20px; background: linear-gradient(90deg, #ff8fb8, #ffb3d1); color: #fff; }

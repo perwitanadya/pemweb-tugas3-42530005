@@ -1,0 +1,48 @@
+<%- include('../partials/header') %>
+
+<h1><%= judul %></h1>
+
+<% if (error) { %>
+  <div class="notif notif-error"><%= error %></div>
+<% } %>
+
+<form action="<%= aksi %>" method="POST" class="form">
+  <label>Nama
+    <input type="text" name="nama" value="<%= member.nama %>" required>
+  </label>
+
+  <label>Email
+    <input type="email" name="email" value="<%= member.email %>" required>
+  </label>
+
+  <label>No HP
+    <input type="text" name="no_hp" value="<%= member.no_hp %>" required>
+  </label>
+
+  <label>Alamat
+    <textarea name="alamat" rows="3"><%= member.alamat %></textarea>
+  </label>
+
+  <label>Total Belanja (Rp)
+    <input type="number" name="total_belanja" min="0" step="1000" value="<%= member.total_belanja %>">
+  </label>
+
+  <label>Tipe Member
+    <select name="tipe">
+      <% daftarTipe.forEach(function(t) { %>
+        <option value="<%= t %>" <%= member.tipe === t ? 'selected' : '' %>><%= t %></option>
+      <% }); %>
+    </select>
+  </label>
+
+  <label>Tanggal Daftar
+    <input type="date" name="tanggal_daftar" value="<%= member.tanggal_daftar %>" required>
+  </label>
+
+  <div class="form-aksi">
+    <button type="submit" class="btn">Simpan</button>
+    <a href="/member" class="btn btn-abu">Batal</a>
+  </div>
+</form>
+
+<%- include('../partials/footer') %>

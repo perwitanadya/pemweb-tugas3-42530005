@@ -1,0 +1,54 @@
+<%- include('../partials/header') %>
+
+<div class="bar-atas">
+  <h1>Data Member</h1>
+  <a href="/member/tambah" class="btn">+ Tambah Member</a>
+</div>
+
+<% if (pesan) { %>
+  <div class="notif"><%= pesan %></div>
+<% } %>
+
+<% if (daftar.length === 0) { %>
+  <p>Belum ada data member.</p>
+<% } else { %>
+  <div class="tabel-wrap">
+    <table class="tabel">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Email</th>
+          <th>No HP</th>
+          <th>Tipe</th>
+          <th>Total Belanja</th>
+          <th>Tanggal Daftar</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% daftar.forEach(function(m, i) { %>
+          <tr>
+            <td><%= i + 1 %></td>
+            <td><%= m.nama %></td>
+            <td><%= m.email %></td>
+            <td><%= m.no_hp %></td>
+            <td><span class="lencana lencana-<%= m.tipe.toLowerCase() %>"><%= m.tipe %></span></td>
+            <td>Rp <%= Number(m.total_belanja).toLocaleString('id-ID') %></td>
+            <td><%= new Date(m.tanggal_daftar).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }) %></td>
+            <td class="aksi">
+              <a href="/member/edit/<%= m.id %>" class="btn btn-kecil">Edit</a>
+              <form action="/member/hapus/<%= m.id %>" method="POST"
+                    data-nama="<%= m.nama %>"
+                    onsubmit="return confirm('Yakin ingin menghapus ' + this.dataset.nama + '?')">
+                <button type="submit" class="btn btn-kecil btn-hapus">Hapus</button>
+              </form>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+<% } %>
+
+<%- include('../partials/footer') %>
