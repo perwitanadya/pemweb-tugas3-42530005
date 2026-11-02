@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=t0ueJOuXbeE
 Nama Lengkap : KOMANG WIDYA PARAMITHA
 Nomor Induk Mahasiswa: 42530005
 Kelas : Pagi
-Tema Pilihan : [lihat catatan di bawah]
+Tema Pilihan : Daftar Member Cafe
 Tautan Repositori : https://github.com/perwitanadya/pemweb-tugas3-42530005
 Tautan Video YouTube : https://www.youtube.com/watch?v=t0ueJOuXbeE
 Status Video YouTube : PUBLIC
