@@ -1,27 +1,31 @@
 # Tugas 3 Pemrograman Web - CRUD Member Pinky Promise Cafe
 
-Nama: Komang Widya Paramitha
+Nama: KOMANG WIDYA PARAMITHA
 NIM: 42530005
 
-## Fitur
-CRUD member dengan Node.js, Express, EJS, MySQL (mysql2), prepared statements, arsitektur MVC, dan pola PRG.
+## Video Penjelasan
+https://www.youtube.com/watch?v=t0ueJOuXbeE
 
-## Cara Menjalankan
-1. `npm install`
-2. Import `database/schema.sql` lewat phpMyAdmin
-3. Salin `.env.example` menjadi `.env`, lalu isi kredensial database
-4. `node app.js`
-5. Buka http://localhost:3000
+## Informasi Submisi
 
+```
 ================================================================================
  SUBMISI TUGAS 3: PEMROGRAMAN WEB (4 SKS) - SUB-CPMK 2.3
 ================================================================================
 Nama Lengkap : KOMANG WIDYA PARAMITHA
 Nomor Induk Mahasiswa: 42530005
 Kelas : Pagi
-Tema Pilihan : Tema A (Menu Cafe)
+Tema Pilihan : [lihat catatan di bawah]
 Tautan Repositori : https://github.com/perwitanadya/pemweb-tugas3-42530005
-Tautan Video YouTube : [https://youtu.be/t0ueJOuXbeE?si=5FaFhybRH1ZLCDPi]
+Tautan Video YouTube : https://www.youtube.com/watch?v=t0ueJOuXbeE
 Status Video YouTube : PUBLIC
 File Skema Basis Data: database.sql (Tersedia di Root Repositori)
 ================================================================================
+```
+
+## Cara Menjalankan
+1. `npm install`
+2. Import `database.sql` lewat phpMyAdmin
+3. Salin `.env.example` menjadi `.env`, lalu isi kredensial database
+4. `node app.js`
+5. Buka http://localhost:3000
