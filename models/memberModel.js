@@ -1,6 +1,6 @@
 const db = require('../config/db');
 
-async function ambilSemua() {
+async function semuaMember() {
   const [baris] = await db.execute(
     'SELECT id, nama, email, no_hp, alamat, total_belanja, tipe, tanggal_daftar FROM member ORDER BY id DESC'
   );
@@ -36,4 +36,4 @@ async function hapus(id) {
   return hasil.affectedRows;
 }
 
-module.exports = { ambilSemua, cariById, tambah, ubah, hapus };
+module.exports = { semuaMember, cariById, tambah, ubah, hapus };

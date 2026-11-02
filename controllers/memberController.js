@@ -32,7 +32,7 @@ function validasi(d) {
 // GET /member
 exports.index = async (req, res, next) => {
   try {
-    const daftar = await Member.ambilSemua();
+    const daftar = await Member.semuaMember();
     const status = req.query.status;
     const pesan = Object.hasOwn(PESAN, status) ? PESAN[status] : null;
     res.render('member/index', { judul: 'Data Member', daftar, pesan });
@@ -66,7 +66,7 @@ exports.simpan = async (req, res, next) => {
   if (error) return tampilkanForm(error);
   try {
     await Member.tambah(data);
-    res.redirect('/member?status=tambah');
+    res.redirect('/member?status=edit');
   } catch (err) {
     if (err.code === 'ER_DUP_ENTRY') return tampilkanForm('Email sudah terdaftar.');
     next(err);
